@@ -1,5 +1,5 @@
 import React, {PureComponent}  from 'react';
-import {Counter} from "./Counter";
+import Counter from "./Counter";
 import PropTypes from 'prop-types';
 
 export class Player extends PureComponent {
@@ -10,7 +10,7 @@ export class Player extends PureComponent {
   };
 
   render() {
-  const {removePlayer, changeScore, name, score, id} = this.props;
+  const {removePlayer, name, score, id} = this.props;
     return (
       <div className="player">
         <span className="player-name">
@@ -19,7 +19,7 @@ export class Player extends PureComponent {
         <span className="player-name">
           {name}
         </span>
-        <Counter score={score} changeScore={changeScore} id={id}/>
+        <Counter score={score} id={id}/>
       </div>
     )
   }
