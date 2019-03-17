@@ -43,7 +43,7 @@ export default class Menu extends Component {
                   <NavLink to="/scoreboard" className="nav-link">Scoreboard</NavLink>
                 </NavItem>
                 <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>s
+                  <DropdownToggle nav caret>
                     Options
                   </DropdownToggle>
                   <DropdownMenu right>

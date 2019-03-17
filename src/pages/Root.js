@@ -4,7 +4,7 @@ import Home from "./Home";
 import Scoreboard from "./scoreboard/Scoreboard";
 import 'bootstrap/dist/css/bootstrap.css';
 import Menu from "./Menu";
-import Heroes from "./heroes/Heroes";
+import {Index} from "./heroes/Index";
 
 export default class Root extends Component {
   render() {
@@ -14,7 +14,7 @@ export default class Root extends Component {
         <div className="container" style={{backgroundColor: '#ffffff'}}>
           <Switch>
             <Route path="/" exact component={Home}/>
-            <Route path="/heroes" component={Heroes}/>
+            <Route path="/heroes/" component={Index}/>
             <Route path="/scoreboard" component={Scoreboard}/>
           </Switch>
         </div>
