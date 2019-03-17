@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from "axios";
+import styles from '../../pages/heroes/Heroes.module.scss'
 
 export default class Heroes extends Component {
   constructor(props) {
@@ -21,12 +22,15 @@ export default class Heroes extends Component {
 
   render() {
     return (
-      <ul>
+      <ul className={styles["img-box"]}>
         {
           this.state.heroes.map(hero => (
-            <li key={hero.hero_id}>
-              <img src={hero.photo} alt={hero.name}/>
-              <span>{hero.name}</span>
+            <li key={hero.hero_id} className="row align-items-center m-0">
+              <div className="col-1 py-2">
+                <img src={hero.photo ? hero.photo : process.env.PUBLIC_URL + '/images/baseline-face-24px.svg'} alt={hero.name}
+                   className="img-fluid rounded-circle" style={{width: '100%'}} />
+              </div>
+              <span className="col">{hero.name}</span>
             </li>
           ))
         }
