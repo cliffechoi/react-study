@@ -11,11 +11,13 @@ export default class Root extends Component {
     return (
       <BrowserRouter>
         <Menu/>
-        <Switch>
-          <Route path="/" exact component={Home}/>
-          <Route path="/heroes" component={Heroes}/>
-          <Route path="/scoreboard" component={Scoreboard}/>
-        </Switch>
+        <div className="container" style={{backgroundColor: '#ffffff'}}>
+          <Switch>
+            <Route path="/" exact component={Home}/>
+            <Route path="/heroes" component={Heroes}/>
+            <Route path="/scoreboard" component={Scoreboard}/>
+          </Switch>
+        </div>
       </BrowserRouter>
     );
   }
